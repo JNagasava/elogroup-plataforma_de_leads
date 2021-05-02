@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const Register = ({ passwordValidation }) => {
     
@@ -33,7 +34,9 @@ const Register = ({ passwordValidation }) => {
                     <label>Confirmação Password *</label>
                     <input className='register-field' type='password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} ></input>
                 </div>
-                <input className='btn-register' type='submit' value='Registrar' />
+                <Link to="/leadspanel">
+                    <input className='btn-register' type='submit' value='Registrar' />
+                </Link>
             </form>
         </div>
     )

@@ -1,17 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import Register from './components/view/Register' 
-import PasswordValidation from './components/controller/PasswordValidation'
-import LeadsPanel from './components/view/LeadsPanel';
-import NewLead from './components/view/NewLead';
+import { BrowserRouter } from 'react-router-dom';
+import './components/controller/Routes'
+import Routes from './components/controller/Routes';
+
 
 function App() {
 
   return (
     <div>
-      {/* <Register passwordValidation={PasswordValidation} /> */}
-      {/* <LeadsPanel /> */}
-      <NewLead />
+      <BrowserRouter>
+        <Routes/>
+      </BrowserRouter>
     </div>
   );
 }

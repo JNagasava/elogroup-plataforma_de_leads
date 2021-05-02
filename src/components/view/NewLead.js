@@ -1,4 +1,9 @@
-const NewLead = () => {
+import { Link, Redirect } from 'react-router-dom'
+import { useHistory, useState } from 'react'
+import PropTypes from 'prop-types'
+import LeadsPanel from './LeadsPanel'
+
+const NewLead = ({ addLead }) => {
 
     const checkAll = (e) => {
         var checkAllState = document.getElementsByName('check-all');
@@ -6,6 +11,13 @@ const NewLead = () => {
         for (var checkbox of checkboxes) {
             checkbox.checked = checkAllState[0].checked;
         }
+    }
+
+    const [name, setName] = useState('')
+    const [status, setStatus] = useState('Cliente em Potencial')
+
+    const onSubmit = (e) => {
+        e.preventDefault()
     }
 
     return (
@@ -16,20 +28,19 @@ const NewLead = () => {
                 </div>
                 <span className="leadspanel-top-title">Novo Lead</span>
             </div>
-            <form className='newlead-form'>
-
+            <form className='newlead-form' onSubmit={onSubmit} >
                 <div className="newlead-info">
                     <div className="register-info">
                         <label>Nome *</label>
-                        <input className='register-field' type='text' ></input>
+                        <input className='register-field' type='text' value={name} onChange={ (e) => setName(e.target.value) } ></input>
                     </div>
                     <div className="register-info">
                         <label>Telefone *</label>
-                        <input className='register-field' type='password' ></input>
+                        <input className='register-field' type='text' ></input>
                     </div>
                     <div className="register-info">
                         <label>Email *</label>
-                        <input className='register-field' type='password' ></input>
+                        <input className='register-field' type='text' ></input>
                     </div>
                 </div>
 
@@ -72,6 +83,10 @@ const NewLead = () => {
             </form>
         </div>
     )
+}
+
+NewLead.propTypes = {
+    addLead: PropTypes.func
 }
 
 export default NewLead
