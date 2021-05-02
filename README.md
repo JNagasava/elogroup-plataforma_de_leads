@@ -18,13 +18,13 @@ $ npm start
 Para facilitar a navegação, quando já tiver executado o app, acesse os seguintes links para as telas :
 
 * Página de Registro
-    * [localhost:3000/register]()
+    * [http://localhost:3000/register](http://localhost:3000/register)
 
 * Painel de Leads
-    * [localhost:3000/leadspanel]()
+    * [http://localhost:3000/leadspanel](http://localhost:3000/leadspanel)
 
 * Cadastro de Novos Leads
-    * [localhost:3000/newlead]()
+    * [http://localhost:3000/newlead](http://localhost:3000/newlead)
 
 *Obs.: Para evitar conflitos, utilize a porta 3000 a qual já está nos links acima*
 
