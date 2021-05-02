@@ -4,6 +4,7 @@ import NewLead from '../view/NewLead'
 import { Switch, Route } from 'react-router-dom'
 import { useState } from 'react'
 import PasswordValidation from './PasswordValidation'
+import { CheckNewRegister, CheckNewLead } from './CheckFields'
 
 const Routes = () => {
 
@@ -33,10 +34,10 @@ const Routes = () => {
 
     return (
         <Switch>
-            <Route path="/" exact ><Register passwordValidation={PasswordValidation} /></Route>
-            <Route path="/register" exact ><Register passwordValidation={PasswordValidation} /></Route>
+            <Route path="/" exact ><Register passwordValidation={PasswordValidation} checkNewRegister={CheckNewRegister} /></Route>
+            <Route path="/register" exact ><Register passwordValidation={PasswordValidation} checkNewRegister={CheckNewRegister} /></Route>
             <Route path="/leadspanel" ><LeadsPanel leads={leads} /></Route>
-            <Route path="/newlead" ><NewLead addLead={addLead} /></Route>
+            <Route path="/newlead" ><NewLead addLead={addLead} checkNewLead={CheckNewLead}/></Route>
             <Route>{() => <div><h1>Page 404!</h1></div>}</Route>
         </Switch>
     )

@@ -1,9 +1,7 @@
-import { Link, Redirect } from 'react-router-dom'
-import { useHistory, useState } from 'react'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
-import LeadsPanel from './LeadsPanel'
 
-const NewLead = ({ addLead }) => {
+const NewLead = ({ addLead, checkNewLead }) => {
 
     const checkAll = (e) => {
         var checkAllState = document.getElementsByName('check-all');
@@ -14,10 +12,23 @@ const NewLead = ({ addLead }) => {
     }
 
     const [name, setName] = useState('')
+    const [telephone, setTelephone] = useState('')
+    const [email, setEmail] = useState('')
     const [status, setStatus] = useState('Cliente em Potencial')
 
     const onSubmit = (e) => {
         e.preventDefault()
+        if (checkNewLead(name, telephone, email, document.getElementsByName('check'))) {
+            setName('')
+            setTelephone('')
+            setEmail('')
+            var checkAllState = document.getElementsByName('check-all');
+            checkAllState[0].checked = false
+            var checkboxes = document.getElementsByName('check');
+            for (var checkbox of checkboxes) {
+                checkbox.checked = false;
+            }
+        }
     }
 
     return (
@@ -36,11 +47,11 @@ const NewLead = ({ addLead }) => {
                     </div>
                     <div className="register-info">
                         <label>Telefone *</label>
-                        <input className='register-field' type='text' ></input>
+                        <input type="number" className='register-field' value={telephone} onChange={ (e) => setTelephone(e.target.value) } ></input>
                     </div>
                     <div className="register-info">
                         <label>Email *</label>
-                        <input className='register-field' type='text' ></input>
+                        <input className='register-field' type='text' value={email} onChange={ (e) => setEmail(e.target.value) } ></input>
                     </div>
                 </div>
 

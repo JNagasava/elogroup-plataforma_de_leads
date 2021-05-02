@@ -2,7 +2,7 @@ import { useState } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-const Register = ({ passwordValidation }) => {
+const Register = ({ passwordValidation, checkNewRegister }) => {
     
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
@@ -10,10 +10,14 @@ const Register = ({ passwordValidation }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        passwordValidation(password, passwordConfirmation)
-        setUser('')
-        setPassword('')
-        setPasswordConfirmation('')
+        
+        if (checkNewRegister(user, password, passwordConfirmation)) {
+            if (passwordValidation(password, passwordConfirmation)) {
+                setUser('')
+                setPassword('')
+                setPasswordConfirmation('')
+            }
+        }
     }
     
     return (
@@ -34,9 +38,7 @@ const Register = ({ passwordValidation }) => {
                     <label>Confirmação Password *</label>
                     <input className='register-field' type='password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} ></input>
                 </div>
-                <Link to="/leadspanel">
-                    <input className='btn-register' type='submit' value='Registrar' />
-                </Link>
+                <input className='btn-register' type='submit' value='Registrar' />
             </form>
         </div>
     )
