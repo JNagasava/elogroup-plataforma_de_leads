@@ -16,7 +16,7 @@ const Register = ({ passwordValidation }) => {
     }
     
     return (
-        <div>
+        <div className="container-register">
             <div className="elogroup-logo">
                 <span className="elogroup-logo-elo">ELO</span><span className="elogroup-logo-group">GROUP</span>
             </div>
