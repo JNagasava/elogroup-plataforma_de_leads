@@ -1,4 +1,32 @@
-const LeadsPanel = () => {
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { Lead } from '../controller/Lead'
+
+const LeadsPanel = ({ leads, getLead }) => {
+
+    console.log('Hello')
+
+    const changeStatus = (e) => {
+
+        const lead = getLead(leads, e.target.id)
+
+        if (!lead) {
+            return
+        }
+
+        if (lead.status === 'Cliente em Potencial') {
+            console.log('Cliente em Potencial')
+            lead.status = 'Dados Confirmados'
+        } else if (lead.status === 'Dados Confirmados') {
+            console.log('Dados Confirmados')
+            lead.status = 'Reunião Agendada'
+        }
+
+        console.log(lead.status)
+
+        return (<LeadsPanel leads={leads} getLead={getLead}/>)
+    }
+
     return (
         <div className="container-panel">
             <div className="leadspanel-top">
@@ -7,8 +35,10 @@ const LeadsPanel = () => {
                 </div>
                 <span className="leadspanel-top-title">Painel de Leads</span>
             </div>
-            <button className="btn-leadspanel">Novo Lead (+)</button>
-            <table className="leadspanel-table">
+            <Link to="/newlead">
+                <button className="btn-leadspanel">Novo Lead (+)</button>
+            </Link>
+            <table className="leadspanel-table" onChange={changeStatus}>
                 <thead>
                     <tr>
                         <th>Cliente em Potencial</th>
@@ -17,21 +47,9 @@ const LeadsPanel = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Org. Internacionais</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Ind. Farm. LTDA</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Musc. Sound Live Cmp</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    {leads.map( (lead) => ( lead.status==='Cliente em Potencial' ? <tr key={lead.key} onClick={changeStatus}><td id={lead.key}>{lead.name}</td><td></td><td></td></tr> : 
+                            lead.status==='Dados Confirmados' ? <tr key={lead.key} onClick={changeStatus}><td></td><td id={lead.key}>{lead.name}</td><td></td></tr> :
+                            <tr key={lead.key} onClick={changeStatus}><td></td><td></td><td id={lead.key}>{lead.name}</td></tr> ))}
                 </tbody>
             </table>
         </div>
