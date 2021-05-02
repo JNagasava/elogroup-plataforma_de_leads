@@ -1,6 +1,6 @@
 const LeadsPanel = () => {
     return (
-        <div className="container-leadspanel">
+        <div className="container-panel">
             <div className="leadspanel-top">
                 <div className="elogroup-logo">
                     <span className="elogroup-logo-elo">ELO</span><span className="elogroup-logo-group">GROUP</span>
@@ -32,7 +32,6 @@ const LeadsPanel = () => {
                     <th></th>
                 </tr>
             </table>
-            
         </div>
     )
 }

@@ -21,15 +21,15 @@ const Register = ({ passwordValidation }) => {
                 <span className="elogroup-logo-elo">ELO</span><span className="elogroup-logo-group">GROUP</span>
             </div>
             <form className='register-form' onSubmit={handleSubmit}>
-                <div className="register-username">
+                <div className="register-info">
                     <label>Usuário *</label>
                     <input className='register-field' type='text' value={user} onChange={(e) => setUser(e.target.value)} ></input>
                 </div>
-                <div className="register-password">
+                <div className="register-info">
                     <label>Password *</label>
                     <input className='register-field' type='password' value={password} onChange={(e) => setPassword(e.target.value)} ></input>
                 </div>
-                <div className="register-password-confirmation">
+                <div className="register-info">
                     <label>Confirmação Password *</label>
                     <input className='register-field' type='password' value={passwordConfirmation} onChange={(e) => setPasswordConfirmation(e.target.value)} ></input>
                 </div>

@@ -11,8 +11,7 @@ const PasswordValidation = (password, passwordConfirmation) => {
             alert('A senhas digitadas são diferentes')
         }
     } else {
-        alert(`A senha deve conter pelo menos 8 caracteres sendo no mínimo 1 caraceter especial,
-               1 caracter numérico e 1 caracter alfanumérico`)
+        alert("A senha deve conter pelo menos 8 caracteres sendo no mínimo 1 caracter especial, 1 caracter numérico e 1 caracter alfanumérico")
     }
 }
 

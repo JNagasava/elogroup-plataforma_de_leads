@@ -54,19 +54,7 @@ body {
   margin-bottom: 1%;
 }
 
-.register-username {
-  display: flex;
-  flex-direction: column;
-  margin: 4% 1%;
-}
-
-.register-password {
-  display: flex;
-  flex-direction: column;
-  margin: 4% 1%;
-}
-
-.register-password-confirmation {
+.register-info {
   display: flex;
   flex-direction: column;
   margin: 4% 1%;
@@ -88,7 +76,7 @@ body {
   font-weight: 300;
 }
 
-.container-leadspanel {
+.container-panel {
   max-width: 800px;
   margin: 30px auto;
   overflow: auto;
@@ -132,10 +120,8 @@ thead {
   color: white;
 }
 
-tr, th {
+th, tr {
   border: 1px solid rgb(0, 0, 0);
-  padding: 0.5rem;
-  height: 5rem;
   font-weight: 500;
   font-size: 14px;
 }
@@ -144,3 +130,48 @@ tr:nth-child(even) {
   background-color: #e6e6e6;
 }
 
+table.leadspanel-table>tr,th {
+  height: 5rem;
+}
+
+.newlead-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.newlead-form>div {
+  margin-top: 3%;
+  margin-right: 5%;
+}
+
+.newlead-info {
+  margin: 5% 3%;
+}
+
+.newlead-oportunities { 
+  margin: 6% auto;
+}
+
+.newlead-table {
+  margin-top: 1%;
+  width: 300px;
+  border-collapse: collapse;
+}
+
+table.newlead-table>tr,th {
+  border: 1px solid rgb(0, 0, 0);
+  height: 1.5rem;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btn-save-lead {
+  width: 300px;
+  height: 42px;
+  background-color: rgb(33, 150, 243);
+  border-style: hidden;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  font-weight: 900;
+}
