@@ -16,21 +16,23 @@ const LeadsPanel = () => {
                         <th>Reunião Agendada</th>
                     </tr>
                 </thead>
-                <tr>
-                    <th>Org. Internacionais</th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th>Ind. Farm. LTDA</th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>Musc. Sound Live Cmp</th>
-                    <th></th>
-                    <th></th>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td>Org. Internacionais</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Ind. Farm. LTDA</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Musc. Sound Live Cmp</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     )

@@ -120,17 +120,22 @@ thead {
   color: white;
 }
 
-th, tr {
+tr,th,td {
   border: 1px solid rgb(0, 0, 0);
   font-weight: 500;
   font-size: 14px;
+  text-align: center;
 }
 
 tr:nth-child(even) {
   background-color: #e6e6e6;
 }
 
-table.leadspanel-table>tr,th {
+table.leadspanel-table>thead>tr {
+  height: 5rem;
+}
+
+table.leadspanel-table>tbody>tr {
   height: 5rem;
 }
 
@@ -159,7 +164,7 @@ table.leadspanel-table>tr,th {
   border-collapse: collapse;
 }
 
-table.newlead-table>tr,th {
+table.newlead-table>tr,th,td {
   border: 1px solid rgb(0, 0, 0);
   height: 1.5rem;
   font-weight: 500;

@@ -65,26 +65,28 @@ const NewLead = ({ addLead, checkNewLead }) => {
                                     <th></th>
                                 </tr>
                             </thead>
-                            <tr>
-                                <th><input type='checkbox' name='check'></input></th>
-                                <th>RPA</th>
-                            </tr>
-                            <tr>
-                                <th><input type='checkbox' name='check'></input></th>
-                                <th>Produto Digital</th>
-                            </tr>
-                            <tr>
-                                <th><input type='checkbox' name='check'></input></th>
-                                <th>Analytics</th>
-                            </tr>
-                            <tr>
-                                <th><input type='checkbox' name='check'></input></th>
-                                <th>BPM</th>
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td><input type='checkbox' name='check'></input></td>
+                                    <td>RPA</td>
+                                </tr>
+                                <tr>
+                                    <td><input type='checkbox' name='check'></input></td>
+                                    <td>Produto Digital</td>
+                                </tr>
+                                <tr>
+                                    <td><input type='checkbox' name='check'></input></td>
+                                    <td>Analytics</td>
+                                </tr>
+                                <tr>
+                                    <td><input type='checkbox' name='check'></input></td>
+                                    <td>BPM</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                     <input className='btn-save-lead' type='submit' value='Salvar' />
