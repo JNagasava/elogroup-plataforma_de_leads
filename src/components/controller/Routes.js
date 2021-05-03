@@ -17,8 +17,6 @@ const Routes = () => {
         setLeads([...leads, newLead])
     }
 
-    
-
     return (
         <Switch>
             <Route path="/" exact ><Register passwordValidation={PasswordValidation} checkNewRegister={CheckNewRegister} /></Route>

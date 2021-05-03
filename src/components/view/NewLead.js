@@ -54,7 +54,6 @@ const NewLead = ({ addLead, checkNewLead }) => {
                         <input className='register-field' type='text' value={email} onChange={ (e) => setEmail(e.target.value) } ></input>
                     </div>
                 </div>
-
                 <div>
                     <div className="newlead-oportunities">
                         <label>Oportunidades *</label>
@@ -91,8 +90,6 @@ const NewLead = ({ addLead, checkNewLead }) => {
                     </div>
                     <input className='btn-save-lead' type='submit' value='Salvar' />
                 </div>
-                
-
             </form>
         </div>
     )

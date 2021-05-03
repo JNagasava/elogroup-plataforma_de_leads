@@ -9,7 +9,6 @@ const Register = ({ passwordValidation, checkNewRegister }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
         if (checkNewRegister(user, password, passwordConfirmation)) {
             if (passwordValidation(password, passwordConfirmation)) {
                 setUser('')

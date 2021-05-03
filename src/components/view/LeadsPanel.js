@@ -1,10 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Lead } from '../controller/Lead'
 
 const LeadsPanel = ({ leads, getLead }) => {
-
-    console.log('Hello')
 
     const changeStatus = (e) => {
 
@@ -23,8 +20,6 @@ const LeadsPanel = ({ leads, getLead }) => {
         }
 
         console.log(lead.status)
-
-        return (<LeadsPanel leads={leads} getLead={getLead}/>)
     }
 
     return (
