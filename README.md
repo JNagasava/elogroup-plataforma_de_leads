@@ -5,8 +5,12 @@ Este repositório tem como finalidade o desenvolvimento de uma **Plataforma de L
 
 ### Página de Registro
 ![tela de registro](https://github.com/JNagasava/elogroup-plataforma_de_leads/blob/main/assets/register_screen.png)
+
+### Painel de Leads
 ![painel de leads](https://github.com/JNagasava/elogroup-plataforma_de_leads/blob/main/assets/leadspanel_screen.png)
-![cadastro novos leads](https://github.com/JNagasava/elogroup-plataforma_de_leads/blob/main/assets/newlead_screen.png)
+
+### Cadastro de novos leads
+![cadastro de novos leads](https://github.com/JNagasava/elogroup-plataforma_de_leads/blob/main/assets/newlead_screen.png)
 
 ## Como executar
 Para executar o programa basta seguir apenas 2  passos no terminal dentro da pasta do projeto:
