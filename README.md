@@ -30,7 +30,6 @@ Para facilitar a navegação, quando já tiver executado o app, acesse os seguin
 
 ## Desenvolvimento
 Para a **Arquitetura do App** (*da parte da camada front-end*) , foi utilizado dois ambientes: **View** o qual foi responsável por toda a renderização das páginas e o **Controller** o qual foi responsável por todo o fluxo de apresentação das páginas e pelas açṍes tomadas ao receber uma resposta do usuário.
-
 ## Ambiente de Desenvolvimento
 * Sistema Operacional
     * Ubuntu 18.04.5 LTS x86_64
@@ -38,9 +37,6 @@ Para a **Arquitetura do App** (*da parte da camada front-end*) , foi utilizado d
     * 7.11.2
 * React
     * 17.0.2
-
-## Conclusão
-Não foi possível concluir todos requisitos (faltou apenas o requisito de adicionar novos leads no "pipe" e "arrastar" leads para diferentes status), pois houve uma pequena dificuldade com a parte de *States* do React. Entretanto foi uma grande aprendizagem o desenvolviemnto da aplicação. Dessa maneira, o desenvolvimento trouxe diversos temas para pensar: arquitetura de software, escopo dos componentes, responsividade das telas além de aprender uma nova linguagem (Javascript) e framework (React)
 ## Referências
 * [Curso introdutório de Javascript](https://www.youtube.com/watch?v=PkZNo7MFNFg)
 * [Curso introdutório de React](https://www.youtube.com/watch?v=w7ejDZ8SWv8)
